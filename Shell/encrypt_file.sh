@@ -18,6 +18,7 @@ openssl aes-256-cbc -salt -in $1 -out "$outputFileName"
 if [ $? -eq 0 ]
 then
   echo "$1 is successfully encrypted"
+  chmod ugo-w $outputFileName
   echo "Deleting $1"
   rm $1
 fi

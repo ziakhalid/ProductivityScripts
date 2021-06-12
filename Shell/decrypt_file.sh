@@ -18,6 +18,7 @@ if [ $? -eq 0 ]
 then
   echo "$1 is successfully decrypted"
   echo "Deleting $1"
+  chmod u+w $1
   rm $1
 else
   echo "Error decrypting $1"
